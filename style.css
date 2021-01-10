@@ -1,0 +1,133 @@
+h2::selection {
+    background: #2B3784;
+    color: #B11313;
+}
+
+.avatar-wrapper {
+    padding:  1rem 0 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-wrapper:hover .avatar-mask {
+    transform: translate(0, 0);
+}
+
+.avatar-wrapper:hover .avatar-costume {
+    transform: translate(0, 0);
+    transition: all .6s ease-out;
+}
+
+.avatar-mask {
+    position: absolute;
+    width: 100px;
+    top: 51px;
+    left: 36px;
+    transform: translate(0, -300%);
+    transition: all .5s ease;
+    pointer-events: none;
+}
+
+.avatar-costume {
+    position: absolute;
+    width: 402px;
+    top: 2px;
+    left: -110px;
+    transform: translate(0, 300%);
+    transition: all 1.5s ease-in;
+    pointer-events: none;
+}
+
+.introduce {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 0.25em;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.contacts {
+    align-items: center;
+}
+
+.contacts li a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.contacts li a svg {
+    width: 24px;
+}
+
+.contacts li a i{
+    margin-right: 4px;
+    font-size: large;
+}
+
+.contacts li a.instagram:hover {
+    color: #b10d0d;
+}
+
+.contacts li a.twitter:hover {
+    color: #1da1f2;
+}
+
+.contacts li a.twitter:hover svg path {
+    fill: #1da1f2;
+    transition: all 0.2s ease-in-out;
+}
+
+.divider.fat {
+    border-top: 0.33em solid #2B3784;
+}
+
+@media (max-width: 1200px) {
+    .avatar-mask {
+        width: 94.6px;
+        top: 36px;
+        left: 20px;
+    }
+
+    .avatar-costume {
+        width: 332px;
+        top: -3px;
+        left: -96px;
+    }
+
+    .contacts {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 991px) {
+    .avatar-mask {
+        width: 58px;
+        top: 33px;
+        left: 19px;
+    }
+
+    .avatar-costume {
+        width: 231px;
+        top: 3px;
+        left: -67px;
+    }
+}
+
+@media (max-width: 768px) {
+    .avatar-mask {
+        width: 125px;
+        top: 61px;
+        left: calc(50.5% - 62px);
+    }
+
+    .avatar-costume {
+        width: 550px;
+        top: -15px;
+        left: calc(50.5% - 268px);
+    }
+}
