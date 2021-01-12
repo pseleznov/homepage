@@ -1,0 +1,229 @@
+#flip {
+    position: relative;
+    perspective: 200rem;
+    height: calc(100vh - 48px);
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    margin: 24px auto;
+}
+
+.face {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+    overflow: auto;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background: #fff;
+    border: 2px solid #2b3784;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#spider-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#spider-button g {
+    transition: all 0.3s ease;
+}
+
+#spider-button:hover g {
+    fill: #b11313;
+}
+
+#spider {
+    cursor: pointer;
+    max-width: 100%;
+    max-height: calc(100vh - 48px);
+    user-select: none;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #b11313;
+}
+
+h2::selection {
+    background: #2b3784;
+    color: #b11313;
+}
+
+.avatar-wrapper {
+    padding: 1rem 0 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.divider.fat {
+    border-top: 0.33em solid #2b3784;
+    transition: all 0.3s ease;
+}
+
+.row:first-child:hover + .row .divider.fat {
+    border-top: 0.33em solid #b11313;
+    width: 100%;
+}
+
+.avatar-wrapper:hover .avatar-mask {
+    transform: translate(0, 0);
+}
+
+.avatar-wrapper:hover .avatar-costume {
+    transform: translate(0, 0);
+    transition: all 0.6s ease-out;
+}
+
+.avatar-mask {
+    position: absolute;
+    width: 100px;
+    top: 51px;
+    left: 36px;
+    transform: translate(0, -300%);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.avatar-costume {
+    position: absolute;
+    width: 402px;
+    top: 2px;
+    left: -110px;
+    transform: translate(0, 300%);
+    transition: all 1.5s ease-in;
+    pointer-events: none;
+}
+
+.introduce {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 0.25em;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.contacts {
+    align-items: center;
+}
+
+.contacts li a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.contacts li a svg {
+    width: 24px;
+}
+
+.contacts li a i {
+    margin-right: 4px;
+    font-size: large;
+}
+
+.contacts li a.instagram:hover {
+    color: #b10d0d;
+}
+
+.contacts li a.twitter:hover {
+    color: #1da1f2;
+}
+
+.contacts li a.twitter:hover svg path {
+    fill: #1da1f2;
+    transition: all 0.2s ease-in-out;
+}
+
+.film-description {
+    opacity: 0;
+    animation: fade .3s ease forwards;
+    animation-delay: calc(var(--i) * 0.09s);
+}
+
+@media (max-width: 1200px) {
+    .avatar-mask {
+        width: 94.6px;
+        top: 36px;
+        left: 20px;
+    }
+
+    .avatar-costume {
+        width: 332px;
+        top: -3px;
+        left: -96px;
+    }
+
+    .contacts {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 991px) {
+    .avatar-mask {
+        width: 58px;
+        top: 33px;
+        left: 19px;
+    }
+
+    .avatar-costume {
+        width: 231px;
+        top: 3px;
+        left: -67px;
+    }
+}
+
+@media (max-width: 768px) {
+    #flip {
+        height: 100vh;
+        margin: 0;
+    }
+
+    .avatar-mask {
+        width: 125px;
+        top: 61px;
+        left: calc(50.5% - 62px);
+    }
+
+    .avatar-costume {
+        width: 550px;
+        top: -15px;
+        left: calc(50.5% - 268px);
+    }
+}
+
+@keyframes fade {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
