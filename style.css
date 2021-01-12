@@ -19,6 +19,19 @@
     overflow: auto;
 }
 
+.face::-webkit-scrollbar {
+    width: 10px;
+}
+
+.face::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #2b3784, #b11313);
+    border-radius: 5px;
+}
+
+.face::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #b11313);
+}
+
 .back {
     transform: rotateY(180deg);
     background: #fff;
@@ -31,7 +44,7 @@
 }
 
 #spider-button {
-    position: absolute;
+    position: fixed;
     top: 24px;
     right: 24px;
     z-index: 1;
