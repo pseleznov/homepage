@@ -89,25 +89,6 @@ h2::selection {
     overflow: hidden;
 }
 
-.divider.fat {
-    border-top: 0.33em solid #2b3784;
-    transition: all 0.3s ease;
-}
-
-.row:first-child:hover + .row .divider.fat {
-    border-top: 0.33em solid #b11313;
-    width: 100%;
-}
-
-.avatar-wrapper:hover .avatar-mask {
-    transform: translate(0, 0);
-}
-
-.avatar-wrapper:hover .avatar-costume {
-    transform: translate(0, 0);
-    transition: all 0.6s ease-out;
-}
-
 .avatar-mask {
     position: absolute;
     width: 100px;
@@ -126,6 +107,25 @@ h2::selection {
     transform: translate(0, 300%);
     transition: all 1.5s ease-in;
     pointer-events: none;
+}
+
+.divider.fat {
+    border-top: 0.33em solid #2b3784;
+    transition: all 0.3s ease;
+}
+
+.row:first-child:hover + .row .divider.fat {
+    border-top: 0.33em solid #b11313;
+    width: 100%;
+}
+
+.avatar-wrapper:hover .avatar-mask {
+    transform: translate(0, 0);
+}
+
+.avatar-wrapper:hover .avatar-costume {
+    transform: translate(0, 0);
+    transition: all 0.6s ease-out;
 }
 
 .introduce {
@@ -174,7 +174,7 @@ h2::selection {
 
 .film-description {
     opacity: 0;
-    animation: fade .3s ease forwards;
+    animation: fade .3s ease 0 forwards;
     animation-delay: calc(var(--i) * 0.09s);
 }
 
