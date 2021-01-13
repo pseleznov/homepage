@@ -174,7 +174,7 @@ h2::selection {
 
 .film-description {
     opacity: 0;
-    animation: fade .3s ease 0 forwards;
+    animation: fade 0.3s ease 0 forwards;
     animation-delay: calc(var(--i) * 0.09s);
 }
 
